@@ -7,7 +7,7 @@ import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import SearchResults from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
-import PageNotFound from "./pages/404/pageNotFound";
+import PageNotFound from "./pages/404/PageNotFound";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
@@ -29,7 +29,6 @@ function App() {
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration")
     .then((res) => {
-      // console.log(res);
 
       const url = {
         backdrop: res.images.secure_base_url + "original", 
