@@ -9,6 +9,7 @@ const Genres = ({ data }) => {
     return (
         <div className="genres">
             {data?.map((g) => {
+                // eslint-disable-next-line array-callback-return
                 if (!genres[g]?.name) return;
                 return (
                     <div key={g} className="genre">

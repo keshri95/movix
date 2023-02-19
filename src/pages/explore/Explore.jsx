@@ -69,6 +69,7 @@ const Explore = () => {
         setSortby(null);
         setGenre(null);
         fetchInitialData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mediaType]);
 
     const onChange = (selectedItems, action) => {
@@ -143,6 +144,7 @@ const Explore = () => {
                                 loader={<Spinner />}
                             >
                                 {data?.results?.map((item, index) => {
+                                    // eslint-disable-next-line array-callback-return
                                     if (item.media_type === "person") return;
                                     return (
                                         <MovieCard

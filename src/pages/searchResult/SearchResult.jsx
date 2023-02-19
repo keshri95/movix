@@ -45,6 +45,7 @@ const SearchResult = () => {
     useEffect(() => {
         setPageNum(1);
         fetchInitialData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [query]);
 
     return (
@@ -69,6 +70,7 @@ const SearchResult = () => {
                                 loader={<Spinner />}
                             >
                                 {data?.results.map((item, index) => {
+                                    // eslint-disable-next-line array-callback-return
                                     if (item.media_type === "person") return;
                                     return (
                                         <MovieCard
